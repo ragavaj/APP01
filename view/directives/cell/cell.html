@@ -1,0 +1,27 @@
+<div style="padding: 15px;">
+    <script type="text/ng-template" id="rowmenu.html">
+
+    <md-menu>
+        <span class="glyphicon glyphicon-option-vertical" aria-hidden="true" ng-click="$mdOpenMenu($event)"></span>
+        <md-menu-content width="4">
+            <md-menu-item ng-repeat="menuitem in menuitems">
+                <md-button ng-click="menuitem.action()">
+                    <div layout="row" flex>
+                        <p flex>Option {{menuitem.label}}</p>
+                    </div>
+                </md-button>
+            </md-menu-item>
+        </md-menu-content>
+    </md-menu>
+
+    </script>
+
+    <table style="width:{{table.width}}px; height:{{table.height}}px;border: 2px solid;">
+        <tr ng-right-click="showContextMenu()">
+            <td>
+                <div ng-include="'rowmenu.html'" class="top-right"></div>
+            </td>
+        </tr>
+    </table>
+
+</div>

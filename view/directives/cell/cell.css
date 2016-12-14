@@ -1,0 +1,9 @@
+td {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    top: 1px;
+    right: 0px;
+}
